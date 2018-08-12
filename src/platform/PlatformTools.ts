@@ -86,6 +86,12 @@ export class PlatformTools {
                     return require("sqlite3");
 
                 /**
+                * sql.js
+                */
+                case "sql.js":
+                    return require("sql.js");
+                    
+                /**
                 * sqlserver
                 */
                 case "mssql":
@@ -198,15 +204,15 @@ export class PlatformTools {
      * Logging functions needed by AdvancedConsoleLogger
      */
     static logInfo(prefix: string, info: any) {
-        console.log(chalk.gray.underline(prefix) + " ", info);
+        console.log(chalk.gray.underline(prefix), info);
     }
 
     static logError(prefix: string, error: any) {
-        console.log(chalk.underline.red(prefix) + " ", error);
+        console.log(chalk.underline.red(prefix), error);
     }
     
     static logWarn(prefix: string, warning: any) {
-        console.log(chalk.underline.yellow(prefix) + " ", warning);
+        console.log(chalk.underline.yellow(prefix), warning);
     }
     
     static log(message: string) {
